@@ -1,11 +1,13 @@
-const spendAmount = document.getElementById("spend__amount");
-const total = document.getElementById("total");
-const amountInput = document.getElementById("amount");
+const spendAmount = document.getElementById('spend__amount');
+const total = document.getElementById('total');
+const limit = document.getElementById('limit');
+const amountInput = document.getElementById('amount');
 
 (function () {
 
-  chrome.storage.sync.get('purse', function (budget) {
+  chrome.storage.sync.get(['purse', 'limit'], function (budget) {
     total.innerHTML = budget.purse;
+    limit.innerHTML = budget.limit;
   })
 
   spendAmount.addEventListener('click', function (e) {
