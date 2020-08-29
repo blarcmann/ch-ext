@@ -35,3 +35,7 @@ chrome.contextMenus.onClicked.addListener(function (cbdata) {
     }
   }
 })
+
+chrome.storage.onChanged.addListener(function (changes, storageName) {
+  chrome.browserAction.setBadgeText({"text": changes.purse.newValue.toString()})
+})
