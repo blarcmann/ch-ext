@@ -18,5 +18,5 @@
     "default_popup": "popup.html",
     "default_title": "A popup bitch" 
   },
-  "permissions": ["storage", "notifications", "contextMenu"]
+  "permissions": ["storage", "notifications", "contextMenus"]
 }
