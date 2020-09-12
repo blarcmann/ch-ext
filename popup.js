@@ -4,7 +4,6 @@ const limit = document.getElementById('limit');
 const amountInput = document.getElementById('amount');
 
 (function () {
-
   chrome.storage.sync.get(['purse', 'limit'], function (budget) {
     total.innerHTML = budget.purse;
     limit.innerHTML = budget.limit;
